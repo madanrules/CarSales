@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :cars
+  resources :cars do
+    get :order_car, :member
+  end
   get 'home/index'
+   get 'home/about_us'
 
   devise_for :sellers
   devise_for :users

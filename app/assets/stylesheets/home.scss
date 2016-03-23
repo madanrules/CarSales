@@ -7,3 +7,29 @@ body {
   margin-top:75px;
 }
 
+img {
+	width:100%;
+}
+
+.center {
+	text-align:center;
+}
+
+.navbar-inverse {
+    background-color: #283593;
+    border-color: #283593;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand{
+  color: #fff;	
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+	color: #fff;
+  background-color: #3f51b5;
+}
+#about_us p{
+	font-size: 20px;
+	padding: 10px 30px;
+}
