@@ -240,8 +240,11 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
+<<<<<<< HEAD
   cucumber-rails
   database_cleaner
+=======
+>>>>>>> f13b0d4fa84156497026ec2684ded1196400ee5b
   devise
   devise-bootstrap-views
   jbuilder (~> 2.0)
