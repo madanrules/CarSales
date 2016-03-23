@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -12,13 +11,16 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @car.image %>
+  <%= image_tag @car.image %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @car.price %>
 </p>
-
+<% if user_signed_in? %>
+  <%= link_to 'Order This Car',car_order_car_path(@car.id) %>
+<% else %>
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
+<% end %>
