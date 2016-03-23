@@ -1,2 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Listing Cars</h1>
+   <div class = "col-xs-4">
+  <% @cars.each do |car| %>    
+      <div class = "center"><%= car.name %> | <%= car.year %></div>
+      <div><%= image_tag car.image %></div>
+      <span><%= car.price %></span>
+      <% if seller_signed_in? %>
+        <span><%= link_to 'Show', car %></span>
+        <span><%= link_to 'Edit', edit_car_path(car) %></span>
+        <span><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% elsif %>
+        <%= link_to 'Order This Car',car_order_car_path(car.id) %>
+      <% end %>
+  <% end %>
+  </div>
