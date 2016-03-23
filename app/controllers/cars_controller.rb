@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+  before_filter :authenticate_user!, only: [:order_car]
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars
@@ -60,6 +61,20 @@ class CarsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def order_car
+    if current_user
+      @order = Order.create(car_id: params[:car_id], user_id: current_user.id, order_date: Time.now)
+      if @order.save
+        redirect_to cars_path, notice: "order placed successfully"
+      else
+        redirect_to cars_path, notice: "order was not placed"
+      end
+    else
+      redirect_to cars_path, notice: "Your are not buyer! Pleas e sign in to buyer"
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

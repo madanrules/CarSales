@@ -21,12 +21,16 @@
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+  <% if current_seller %>
+    <%= f.hidden_field :seller_id, value: current_seller.id %>
+  <% end %>
+  </br>
   <div class="actions">
     <%= f.submit %>
   </div>
