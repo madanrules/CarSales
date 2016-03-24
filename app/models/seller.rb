@@ -5,4 +5,5 @@ class Seller < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :cars
+  has_many :services
 end

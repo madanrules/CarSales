@@ -66,7 +66,7 @@ class CarsController < ApplicationController
     if current_user
       @order = Order.create(car_id: params[:car_id], user_id: current_user.id, order_date: Time.now)
       if @order.save
-        redirect_to cars_path, notice: "order placed successfully"
+        redirect_to cars_path, notice: "Your Car has been ordered"
       else
         redirect_to cars_path, notice: "order was not placed"
       end
