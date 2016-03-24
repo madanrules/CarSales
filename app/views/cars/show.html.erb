@@ -19,7 +19,7 @@
   <%= @car.price %>
 </p>
 <% if user_signed_in? %>
-  <%= link_to 'Order This Car',car_order_car_path(@car.id) %>
+  <%= link_to 'Order This Car',car_order_car_path(@car.id), class: "btn btn-primary", name: 'Order This Car', id: 'prem' %>
 <% else %>
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

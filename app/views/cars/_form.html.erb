@@ -27,7 +27,7 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <% if current_seller %>
+  <% if seller_signed_in? %>
     <%= f.hidden_field :seller_id, value: current_seller.id %>
   <% end %>
   </br>
