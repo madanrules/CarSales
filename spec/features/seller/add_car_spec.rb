@@ -7,7 +7,7 @@ RSpec.feature 'As a seller, I want to add cars so that the buyer can buy them.' 
     visit '/seller/1/add_cars'
     fill_in 'Name', with: 'Dodge Challenger'
     fill_in 'Price' with: '22500'
-    fill_in 'Description', with: 'Awesome Car'
+    fill_in 'image'
     click_button 'Add Car'
     expect(page).to have_content("Car has been sucessfully added")
   end
