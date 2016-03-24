@@ -8,7 +8,6 @@ RSpec.feature 'As a seller, I want to add cars so that the buyer can buy them.' 
   	fill_in 'seller_password', with: 'admin123'
   	click_button 'Sign in'
     visit '/cars/new'
-    p page.html
     fill_in 'Name', with: 'Dodge Challenger'
     fill_in 'Price', with: '22500'
     attach_file 'Image', Rails.public_path + "images/image1.jpg"
