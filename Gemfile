@@ -43,11 +43,12 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
+  gem 'cucumber-rails'
 end
 
 group :test do
   gem 'capybara'
-  gem 'cucumber-rails', :require => false
+  # gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
