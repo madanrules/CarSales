@@ -20,7 +20,6 @@ When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
 end
 
 When(/^I click "([^"]*)"$/) do |arg1|
-p ENV['RAILS_ENV']
   click_on arg1
 end
 
@@ -35,8 +34,6 @@ When(/^I fill car form$/) do
 end
 
 When(/^I press "([^"]*)"$/) do |arg1|
-	p page.html
-	p ENV['RAILS_ENV']
   click_button(arg1)
 end
 
