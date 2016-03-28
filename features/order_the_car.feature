@@ -8,7 +8,7 @@ Feature: Order the Car
 		    And I click "Sign in"
 		    Then page should have the content "Signed in successfully."
         Given I am on the car show page
-        When I press "Order This Car"
-        Then page should have notice message "Your Car has been ordered"
-        And I click "Sign out"
+        When I click on "Order This Car"
+        Then page should have the content "Your Car has been ordered"
+        And I click "Buyer SignOut"
         Then page should have the content "Signed out successfully."

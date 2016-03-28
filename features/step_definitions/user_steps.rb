@@ -56,4 +56,9 @@ Given(/^I am on the service listing page$/) do
   visit '/services'
 end
 
+When(/^I click on "([^"]*)"$/) do |arg1|
+  click_on(arg1)
+end
+
+
 
