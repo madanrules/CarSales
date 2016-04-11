@@ -1,0 +1,8 @@
+<%= bootstrap_form_tag url: '/profiles/update', method: 'post' do |f| %>
+  <%= f.text_field :name, value: @user.name %>
+  <%= f.text_area :aboutme, size: "10x4",value: @user.aboutme %>
+  <%= f.text_field :place,value: @user.place %>
+  <%= f.text_field :phone,value: @user.phone %>
+  <%= f.file_field :image %>
+  <%= f.submit "Update" %>
+<% end %>

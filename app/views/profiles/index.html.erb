@@ -1,0 +1,11 @@
+<div class="container profile">
+  <h3> My Profile </h3>
+  <%= image_tag @user.image.url(:medium) %>
+  <p> <%= @user.name %></p>
+  <p> Place: <%= @user.place %></p>
+  <p> About me: <%= @user.aboutme %></p>
+  <p> Phone: <%= @user.phone %></p>
+
+
+  <p> <%= link_to 'Edit Profile', profiles_edit_path %></p>
+</div>

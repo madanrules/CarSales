@@ -36,11 +36,14 @@
           <% if seller_signed_in? %>
             <li><%= link_to "Seller SignOut", destroy_seller_session_path, :method => :delete %></li>
              <li><%= link_to "Add a New Car", new_car_path %></li>
+             <li><%= link_to "Profile", profiles_path %></li>
           <% else %>
             <li><%= link_to "Seller Sign", new_seller_session_path %></li>
           <% end %>
           <% if user_signed_in? %>
+          <li><%= link_to "Profile", profiles_path %></li>
             <li><%= link_to "Buyer SignOut", destroy_user_session_path, :method => :delete %></li>
+
           <% else %>
             <li><%= link_to "Buyer Sign", new_user_session_path %></li>
           <% end %>
