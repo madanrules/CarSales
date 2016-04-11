@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 20160324144029) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "place"
+    t.string   "phone"
+    t.text     "aboutme"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -77,6 +85,14 @@ ActiveRecord::Schema.define(version: 20160324144029) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "place"
+    t.string   "phone"
+    t.text     "aboutme"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
