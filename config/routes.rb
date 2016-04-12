@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   resources :services
 
   root to: "home#index"
+  resources :profiles, only: [:index]
+  resources :users, only: [:show]
+
+  get 'profiles/edit' , to: 'profiles#edit'
+  post 'profiles/update' , to: 'profiles#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
