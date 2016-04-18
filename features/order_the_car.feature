@@ -10,5 +10,5 @@ Feature: Order the Car
         Given I am on the car show page
         When I click on "Order This Car"
         Then page should have the content "Your Car has been ordered"
-        And I click "Buyer SignOut"
+        And I click "Signout"
         Then page should have the content "Signed out successfully."
