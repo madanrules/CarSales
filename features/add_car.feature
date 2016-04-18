@@ -11,6 +11,6 @@ Feature: As a seller, I want to add cars so that the buyer can buy them.
         When I fill car form
         When I press "Create Car"
         Then page should have the content "Car was successfully created."
-        And I click "Seller SignOut"
+        And I click "Signout"
         Then page should have the content "Signed out successfully."
         

@@ -2,6 +2,10 @@ Given(/^I am on the about us page$/) do
  visit 'home/about_us'
 end
 
+Given(/^I am on the home page$/) do
+ visit '/'
+end
+
 Then(/^page should have the content "([^"]*)"$/) do |arg1|
   text = "We believe there’s a better, happier way to buy and sell cars. That’s why we offer features like free listings and a map that shows all available cars. It’s also why we put joy into everything we do. CarsGuide is all about focusing on making things clearer, simpler, and a little bit more enjoyable."
   arg1 == text
@@ -13,6 +17,11 @@ end
 
 When(/^I go to the seller login page$/) do
   visit '/sellers/sign_in'
+end
+
+Then(/^I go to the buyer edit profile page$/) do
+  click_on('Profile')
+  visit '/profiles/edit'
 end
 
 When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
@@ -34,7 +43,7 @@ When(/^I fill car form$/) do
 end
 
 When(/^I press "([^"]*)"$/) do |arg1|
-  click_button(arg1)
+  find('input[name="commit"]').click
 end
 
 Then(/^page should have notice message "([^"]*)"$/) do |arg1|
@@ -55,6 +64,10 @@ end
 
 When(/^I click on "([^"]*)"$/) do |arg1|
   click_on(arg1)
+end
+
+Given(/^I click on sellers email$/) do
+  all('.profile')[1].click
 end
 
 

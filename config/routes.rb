@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   resources :profiles, only: [:index]
-  resources :users, only: [:show]
+  resources :sellers, only: [:show]
 
   get 'profiles/edit' , to: 'profiles#edit'
   post 'profiles/update' , to: 'profiles#update'

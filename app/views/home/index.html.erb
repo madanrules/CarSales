@@ -1,7 +1,9 @@
 <h1>Listing Cars</h1>
-   <div class = "col-xs-4">
-  <% @cars.each do |car| %>    
+  <div>
+  <% @cars.each do |car| %> 
+    <div class = "col-xs-5 each-car">   
       <div class = "center"><%= car.name %> | <%= car.year %></div>
+      <p> Listed By: <%= link_to "#{car.seller.email}", seller_path(car.seller.id), class: 'profile' %></p>
       <div><%= image_tag car.image %></div>
       <span><%= car.price %></span>
       <% if seller_signed_in? %>
@@ -11,5 +13,7 @@
       <% elsif %>
         <%= link_to 'Order This Car',car_order_car_path(car.id) %>
       <% end %>
+     </div>
   <% end %>
   </div>
+ 
