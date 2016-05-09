@@ -46,9 +46,6 @@ When(/^I press "([^"]*)"$/) do |arg1|
   find('input[name="commit"]').click
 end
 
-Then(/^page should have notice message "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
 
 When(/^I go to the buyer login page$/) do
   visit '/users/sign_in'
@@ -70,5 +67,35 @@ Given(/^I click on sellers email$/) do
   all('.profile')[1].click
 end
 
+When(/^I go to the home page$/) do
+  visit '/'
+end
 
+When(/^I go to seller profile$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should be able to rate the seller$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I go to buyer profile$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should be able to rate the buyer$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should be able to review the seller$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should be able to review the buyer$/) do
+   # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should be able to view the rating and review of the seller$/) do
+  # Write code here that turns the phrase above into concrete actions
+end
 
