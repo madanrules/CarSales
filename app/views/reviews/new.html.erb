@@ -1,0 +1,5 @@
+<%= bootstrap_form_for(@reviews) do |f| %>
+  <%= f.text_field :description%>
+  <%= hidden_field :seller_id, 'seller_id', { value: @seller.id }  %>
+  <%= f.submit "create review" %>
+<% end %>
