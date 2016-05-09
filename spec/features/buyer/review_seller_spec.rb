@@ -7,8 +7,8 @@ RSpec.feature 'As a buyer,I want to write a review' do
   	fill_in 'user_email', with: 'testuser@gmail.com'
   	fill_in 'user_password', with: 'admin123'
   	click_button 'Sign in'
-    visit '/seller/1'
-    page.find(".review").click
+    visit '/sellers/1'
+    page.find("#review").click
     visit '/reviews/new?seller_id=1'
     fill_in 'review_description', with: 'test description'
     click_button 'create review'

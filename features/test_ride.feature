@@ -16,4 +16,4 @@ Feature: Test Ride
         When I fill in "test_ride_car_id" with: "1"
         And I click "Create Test ride"
         Given I am on the Confirmation page
-        Then page should have the content "Signed in successfully."
+        Then page should have the content "You have sucessfully booked your test ride on."
