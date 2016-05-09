@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   resources :sellers, only: [:show]
   resources :reviews, only: [:new,:create]
 
+  resources :test_rides
+  get 'test_rides/:id/confirmation', to: "test_rides#confirmation"
   get 'profiles/edit' , to: 'profiles#edit'
   post 'profiles/update' , to: 'profiles#update'
 
