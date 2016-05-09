@@ -67,7 +67,6 @@ Given(/^I click on sellers email$/) do
   all('.profile')[1].click
 end
 
-<<<<<<< HEAD
 When(/^I go to the home page$/) do
   visit '/'
 end
@@ -83,7 +82,6 @@ end
 When(/^I go to buyer profile$/) do
    # Write code here that turns the phrase above into concrete actions
 end
-=======
 Given(/^I am on the seller show page$/) do
   visit '/sellers/1'
 end
@@ -126,22 +124,4 @@ end
 
 
 
-
->>>>>>> 77cdde363be42b7559a4cfb54caa734a51ba3af2
-
-Then(/^I should be able to rate the buyer$/) do
-   # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should be able to review the seller$/) do
-   # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should be able to review the buyer$/) do
-   # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should be able to view the rating and review of the seller$/) do
-  # Write code here that turns the phrase above into concrete actions
-end
 
