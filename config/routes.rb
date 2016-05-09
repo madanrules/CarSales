@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
+  get 'reviews/new'
+
+  get 'reviews/create'
+
   resources :cars do
     get :order_car, :member
   end
@@ -13,7 +18,10 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :profiles, only: [:index]
   resources :sellers, only: [:show]
+  resources :reviews, only: [:new,:create]
 
+  resources :test_rides
+  get 'test_rides/:id/confirmation', to: "test_rides#confirmation"
   get 'profiles/edit' , to: 'profiles#edit'
   post 'profiles/update' , to: 'profiles#update'
 

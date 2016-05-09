@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324144029) do
+ActiveRecord::Schema.define(version: 20160509133133) do
+
+  create_table "average_caches", force: :cascade do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.float    "avg",           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cars", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +47,46 @@ ActiveRecord::Schema.define(version: 20160324144029) do
 
   add_index "orders", ["car_id"], name: "index_orders_on_car_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+
+  create_table "overall_averages", force: :cascade do |t|
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.float    "overall_avg",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.float    "stars",         null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rates", ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type"
+  add_index "rates", ["rater_id"], name: "index_rates_on_rater_id"
+
+  create_table "rating_caches", force: :cascade do |t|
+    t.integer  "cacheable_id"
+    t.string   "cacheable_type"
+    t.float    "avg",            null: false
+    t.integer  "qty",            null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "seller_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "sellers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -73,6 +122,18 @@ ActiveRecord::Schema.define(version: 20160324144029) do
   end
 
   add_index "services", ["seller_id"], name: "index_services_on_seller_id"
+
+  create_table "test_rides", force: :cascade do |t|
+    t.text     "address"
+    t.datetime "date"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "car_id"
+  end
+
+  add_index "test_rides", ["car_id"], name: "index_test_rides_on_car_id"
+  add_index "test_rides", ["user_id"], name: "index_test_rides_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

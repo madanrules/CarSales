@@ -1,0 +1,33 @@
+<%= form_for(@test_ride) do |f| %>
+  <% if @test_ride.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test_ride.errors.count, "error") %> prohibited this test ride from being saved:</h2>
+
+      <ul>
+      <% @test_ride.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="hidden">
+    <% if user_signed_in? %>
+    <%= f.text_field :user_id, value: current_user.id %>
+    <%= f.text_field :car_id, value: params[:car_id] %>
+  <% end %>
+  </div>
+  
+  </br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
