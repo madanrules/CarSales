@@ -70,5 +70,48 @@ Given(/^I click on sellers email$/) do
   all('.profile')[1].click
 end
 
+Given(/^I am on the seller show page$/) do
+  visit '/sellers/1'
+end
+
+Given(/^I am on the write a review page$/) do
+  visit '/reviews/new?seller_id=1'
+end
+
+Given(/^I am on the Home page$/) do
+  visit '/home/index'
+end
+
+Given(/^I am on the test ride page$/) do
+  visit '/test_rides/new?car_id=1'
+end
+
+Given(/^I am on the Confirmation page$/) do
+  visit '/test_rides/1/confirmation'
+end
+
+When(/^I go to the click test ride page$/) do
+  click_link('Test Ride', match: :first)
+end
+
+When(/^I fill in "([^"]*)" with: "([^"]*)"$/) do |arg1, arg2|
+  fill_in(arg1, with: arg2)
+end
+
+Given(/^I am on the seller profile page$/) do
+  visit '/sellers/1'
+end
+
+When(/^I go to click rate$/) do
+  page.first(".star").click
+end
+
+
+
+
+
+
+
+
 
 

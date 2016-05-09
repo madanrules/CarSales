@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504153261) do
+ActiveRecord::Schema.define(version: 20160509133133) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -122,6 +122,18 @@ ActiveRecord::Schema.define(version: 20160504153261) do
   end
 
   add_index "services", ["seller_id"], name: "index_services_on_seller_id"
+
+  create_table "test_rides", force: :cascade do |t|
+    t.text     "address"
+    t.datetime "date"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "car_id"
+  end
+
+  add_index "test_rides", ["car_id"], name: "index_test_rides_on_car_id"
+  add_index "test_rides", ["user_id"], name: "index_test_rides_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

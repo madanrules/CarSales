@@ -9,6 +9,12 @@ GIT
       mime-types
       mimemagic (~> 0.3.0)
 
+GIT
+  remote: git://github.com/wazery/ratyrate.git
+  revision: 61487c4726c06748218fe082f85e5a253b69e225
+  specs:
+    ratyrate (1.2.2.alpha)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,7 +176,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.1.1)
-    ratyrate (1.2.2.alpha)
     rdoc (4.2.2)
       json (~> 1.4)
     responders (2.1.1)
@@ -252,7 +257,7 @@ DEPENDENCIES
   nprogress-rails
   paperclip!
   rails (= 4.2.4)
-  ratyrate
+  ratyrate!
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

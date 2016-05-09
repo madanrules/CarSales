@@ -10,7 +10,10 @@
         <span><%= link_to 'Show', car %></span>
         <span><%= link_to 'Edit', edit_car_path(car) %></span>
         <span><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-      <% elsif %>
+      <% elsif user_signed_in?%>
+        <%= link_to 'Order This Car',car_order_car_path(car.id) %>
+        <%= link_to 'Test Ride',new_test_ride_path(:car_id => car.id),class: "pull-right test_ride_#{car.id}" %>
+      <% else %>
         <%= link_to 'Order This Car',car_order_car_path(car.id) %>
       <% end %>
      </div>
