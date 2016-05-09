@@ -2,7 +2,7 @@
 
   <h3>Seller profile </h3>
   Speed  : <%= rating_for @user, "speed" %>
-  <%= image_tag @user.image.url(:medium) %>
+  <%= image_tag @user.image.url(:medium),class: "profile_img" %>
   <div style = "margin-top:20px;">
   <p> <h3 class = "center"> <%= @user.name %> </h3></p>
   <p> Place: <%= @user.place %></p>
@@ -21,5 +21,5 @@
 <% end %>
 </ul>
 
-<%= link_to "Write a review ", new_review_path(:seller_id => @user.id)%>
+<%= link_to "Write a review ", new_review_path(:seller_id => @user.id), class: "review" %>
 </div>

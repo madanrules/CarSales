@@ -28,7 +28,7 @@ gem 'devise-bootstrap-views'
 gem 'nprogress-rails'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'bootstrap_form'
-gem 'ratyrate'
+gem 'ratyrate', :github => 'wazery/ratyrate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
