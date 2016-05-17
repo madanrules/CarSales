@@ -38,6 +38,7 @@ end
 
 When(/^I fill car form$/) do
   fill_in('Name', with:"John")
+  fill_in('Year', with: "2016")
   fill_in('Price', with: 22500)
   attach_file 'Image', File.join(Rails.root, 'public', 'images', 'image1.jpg')
 end
@@ -105,6 +106,36 @@ end
 When(/^I go to click rate$/) do
   page.first(".star").click
 end
+
+Given(/^I am going to edit my car$/) do
+  visit '/cars/1/edit'
+end
+
+When(/^I Edit car form$/) do
+  fill_in('Name', with:"John test")
+  fill_in('Year', with: "2014")
+  fill_in('Price', with: 23500)
+  attach_file 'Image', File.join(Rails.root, 'public', 'images', 'image2.jpg')
+end
+
+When(/^I go to the car show page$/) do
+  visit '/cars/1'
+end
+
+Given(/^I am on the buyer profile page$/) do
+  visit '/profiles'
+end
+
+When(/^I go to see seller profile page$/) do
+  visit '/profiles'
+end
+
+When(/^I go to the click review of user$/) do
+  visit '/buyer_profile/1'
+end
+
+
+
 
 
 

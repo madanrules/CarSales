@@ -1,11 +1,19 @@
 <div class="container col-xs-4 col-sm-offset-4 profile">
   <%= image_tag @user.image.url(:medium) %>
   <div style = "margin-top:20px;">
-  <p> <h3 class = "center"> <%= @user.name %> </h3></p>
-  <p> Place: <%= @user.place %></p>
-  <p> About me: <%= @user.aboutme %></p>
-  <p> Phone: <%= @user.phone %></p>
+	  <p> <h3 class = "center"> <%= @user.name %> </h3></p>
+	  <p> Place: <%= @user.place %></p>
+	  <p> About me: <%= @user.aboutme %></p>
+	  <p> Phone: <%= @user.phone %></p>
+  </div>
+<div class="col-xs-12">
+ <% if current_seller %>
+  <h3>Reviews</h3>
+   <% @user.reviews.each do |review| %>
+    <p><%= review.description %></p>
+    <p><%= link_to "#{review.review_group.user.name}", "/buyer_profile/#{review.review_group.user.id}", class: "buyer_name_show"%></p>
+   <% end %>
+ <% end %>
 </div>
-
   <p> <%= link_to 'Edit Profile', profiles_edit_path %></p>
 </div>

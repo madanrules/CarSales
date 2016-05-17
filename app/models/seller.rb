@@ -6,7 +6,8 @@ class Seller < ActiveRecord::Base
 
   has_many :cars
   has_many :services
-  has_many :reviews
+  has_many :review_groups
+  has_many :reviews, through: :review_groups
 
   ratyrate_rateable "speed", "engine", "price"
   

@@ -75,6 +75,29 @@ class CarsController < ApplicationController
     end
   end
 
+  def search_model_type
+    if params[:id].present?
+      @model_cars = []
+      @model_cars << Car.find(params[:id])
+    end 
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def search_date
+    if params[:id].present?
+      if params[:id] == "0"
+        @cars = Car.order(created_at: :desc)
+      elsif params[:id] == "1"
+        @cars = Car.order(created_at: :asc)
+      end
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
