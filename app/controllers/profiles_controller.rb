@@ -1,7 +1,5 @@
 class ProfilesController < ApplicationController
 
-
-
   def index
     if current_user 
       @user = current_user
@@ -10,8 +8,8 @@ class ProfilesController < ApplicationController
     else
       redirect_to '404'
     end
+    
   end
-
 
   def edit
     if current_user 
@@ -38,6 +36,14 @@ class ProfilesController < ApplicationController
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def buyer_profile
+    if params[:id].present?
+      @buyer = User.find(params[:id])
+    else
+      redirect_to '404'
     end
   end
 

@@ -1,22 +1,8 @@
+<%= select_tag 'sort_by_date',options_for_select([["New", 0],["Old", 1] ]), {prompt: "Choose Options"} %>
+<%= select_tag 'sort_by_car_name', options_for_select(@cars.collect{ |u| [u.name, u.id] }), {prompt: "Choose car model"} %>
+
 <h1>Listing Cars</h1>
-  <div>
-  <% @cars.each do |car| %> 
-    <div class = "col-xs-5 each-car">   
-      <div class = "center"><%= car.name %> | <%= car.year %></div>
-      <p> Listed By: <%= link_to "#{car.seller.email}", seller_path(car.seller.id), class: 'profile' %></p>
-      <div><%= image_tag car.image %></div>
-      <span><%= car.price %></span>
-      <% if seller_signed_in? %>
-        <span><%= link_to 'Show', car %></span>
-        <span><%= link_to 'Edit', edit_car_path(car) %></span>
-        <span><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-      <% elsif user_signed_in?%>
-        <%= link_to 'Order This Car',car_order_car_path(car.id) %>
-        <%= link_to 'Test Ride',new_test_ride_path(:car_id => car.id),class: "pull-right test_ride_#{car.id}" %>
-      <% else %>
-        <%= link_to 'Order This Car',car_order_car_path(car.id) %>
-      <% end %>
-     </div>
-  <% end %>
-  </div>
+<div id = "car_list">
+  <%= render partial:"car_list", locals: {cars: @cars} %>
+</div>
  

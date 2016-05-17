@@ -19,4 +19,5 @@
 //= require bootstrap
 //= require jquery.raty
 //= require ratyrate
+//= require custom.js
 //= require_tree .
