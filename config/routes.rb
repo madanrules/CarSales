@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   resources :profiles, only: [:index]
+  get 'buyer_profile/:id', to: 'profiles#buyer_profile'
+  get 'search_model_type/:id', to: 'cars#search_model_type'
+  get 'search_date/:id', to: 'cars#search_date'
   resources :sellers, only: [:show]
   resources :reviews, only: [:new,:create]
 

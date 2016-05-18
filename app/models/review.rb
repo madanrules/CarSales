@@ -1,3 +1,4 @@
 class Review < ActiveRecord::Base
-  belongs_to :seller
+  has_one :review_group
+  accepts_nested_attributes_for :review_group
 end
