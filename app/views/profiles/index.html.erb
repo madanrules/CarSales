@@ -11,7 +11,7 @@
   <h3>Reviews</h3>
    <% @user.reviews.each do |review| %>
     <p><%= review.description %></p>
-    <p><%= link_to "#{review.review_group.user.name}", "/buyer_profile/#{review.review_group.user.id}", class: "buyer_name_show"%></p>
+    <p>Written by <%= link_to "#{review.review_group.user.email}", "/buyer_profile/#{review.review_group.user.id}", class: "buyer_name_show"%></p>
    <% end %>
  <% end %>
 </div>
