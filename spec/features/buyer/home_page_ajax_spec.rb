@@ -11,8 +11,9 @@ RSpec.feature 'As a Buyer, I want to login.' do
     expect(page).to have_content("Signed in successfully.")
     visit '/home/index'
     select 'New', from: "sort_by_date"
+    sleep 5
     puts find(:css, '#sort_by_date').value
-    # puts page.body
+    puts page.body
     @el = page.all(:css, '.each-car')[0]
     puts @el.text
   end
