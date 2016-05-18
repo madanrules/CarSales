@@ -76,9 +76,8 @@ class CarsController < ApplicationController
   end
 
   def search_model_type
-    if params[:id].present?
-      @model_cars = []
-      @model_cars << Car.find(params[:id])
+    if params[:model_type].present?
+      @model_cars = Car.where(model_type: params[:model_type])
     end 
     respond_to do |format|
       format.js

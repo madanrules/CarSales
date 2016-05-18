@@ -134,6 +134,15 @@ When(/^I go to the click review of user$/) do
   visit '/buyer_profile/1'
 end
 
+When(/^I choose option$/) do
+  visit '/home/index'
+  select 'New', from: "sort_by_date"
+  puts find(:css, '#sort_by_date').value
+  @el = page.all(:css, '.each-car')[0]
+  puts @el.text
+  @el == "Car9 | 2016"
+end
+
 
 
 
