@@ -2,7 +2,10 @@ ready = function(){
 	$('#sort_by_car_name').on('change', function(event) {
     $.ajax({
 	    type: "get",
-	    url: "/search_model_type/" + $(this).val(),
+	    url: "/search_model_type",
+	    data: {
+              'model_type': $(this).val()
+            },
 	    format: "js",
 	    dataType: "script"
     });

@@ -1,5 +1,5 @@
 <%= select_tag 'sort_by_date',options_for_select([["New", 0],["Old", 1] ]), {prompt: "Choose Options"} %>
-<%= select_tag 'sort_by_car_name', options_for_select(@cars.collect{ |u| [u.name, u.id] }), {prompt: "Choose car model"} %>
+<%= select_tag 'sort_by_car_name', options_for_select(Car.pluck(:model_type).uniq), {prompt: "Choose car model"} %>
 
 <h1>Listing Cars</h1>
 <div id = "car_list">
