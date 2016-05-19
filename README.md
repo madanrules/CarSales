@@ -12,6 +12,8 @@ In that work space you have to clone your forked repository using the following 
 
 `git clone <your-url>`
 
+Now cd into the working directory - CarSales
+
 =============================================================================================================================
 
 Then run the following commands:
