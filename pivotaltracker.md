@@ -14,4 +14,4 @@
 |                          | View Buyer profile | https://www.pivotaltracker.com/projects/1547269/stories/117562623      | Madan Mohan Reddy Battu, Yuga Mounika Challagolla|
 | Yuga Mounika Challagolla | Order Car          | https://www.pivotaltracker.com/projects/1547269/stories/115746891      | In class Mar 30|
 |                          | Edit Seller Profile| https://www.pivotaltracker.com/projects/1547269/stories/117562333      | Madan Mohan Reddy Battu - In class Apr 6/ Apr 8|
-|                          | Review Seller      | https://www.pivotaltracker.com/projects/1547269/stories/118319445      | In class Apr 13/ Apr 15|
+|                          | Review Seller      | https://www.pivotaltracker.com/projects/1547269/stories/118319445      | Rohan Reddy Bongurala - In class Apr 13/ Apr 15|
