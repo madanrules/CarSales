@@ -1,4 +1,4 @@
-== CAR SALES !!!
+#CAR SALES !!!
 ================
 
 Instructions to set up this project :
@@ -10,7 +10,7 @@ After you have forked it, open cloud 9 and create a new workspace.
 
 In that work space you have to clone your forked repository using the following command :
 
-> git clone <your-url>
+`git clone <your-url>`
 
 =============================================================================================================================
 
@@ -50,4 +50,4 @@ Use the following command to run the project :
 
 
 THANK YOU!!!
-==============
+============
