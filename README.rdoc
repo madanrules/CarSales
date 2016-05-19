@@ -12,14 +12,21 @@ In that work space you have to clone your forked repository using the following 
 
 `git clone <your-url>`
 
+
 Then run the following commands:
 
 1) `gem install bundle`
+
 2) `bundle install`
+
 3) `rake db:migrate`
+
 4) `rake db:seed`
+
 5) `sudo apt-get install imagemagick`
+
 6) `rake populate_car`
+
 
 After you have set up the project, run `cucumber` to see all the features running.
 
