@@ -12,8 +12,10 @@ In that work space you have to clone your forked repository using the following 
 
 `git clone <your-url>`
 
+=============================================================================================================================
 
 Then run the following commands:
+--------------------------------
 
 1) `gem install bundle`
 
@@ -27,15 +29,22 @@ Then run the following commands:
 
 6) `rake populate_car`
 
+=============================================================================================================================
+
 
 After you have set up the project, run `cucumber` to see all the features running.
 
 The next step is to run `rspec` to test all the spec files.
 
 After you are done with RSpec and Cucumber, it is time to get the project running.
+=============================================================================================================================
+
 
 Use the following command to run the project :
+---------------------------------------------
 
 `rackup -p $PORT -o $IP`
 
+
+=============================================================================================================================
 ==THANK YOU
