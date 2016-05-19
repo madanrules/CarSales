@@ -1,28 +1,34 @@
-== README
+== CAR SALES !!!
+================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructions to set up this project :
+-------------------------------------
 
-Things you may want to cover:
+First, make sure you have forked this repository.
 
-* Ruby version
+After you have forked it, open cloud 9 and create a new workspace.
 
-* System dependencies
+In that work space you have to clone your forked repository using the following command :
 
-* Configuration
+`git clone <your-url>`
 
-* Database creation
+Then run the following commands:
 
-* Database initialization
+1) `gem install bundle`
+2) `bundle install`
+3) `rake db:migrate`
+4) `rake db:seed`
+5) `sudo apt-get install imagemagick`
+6) `rake populate_car`
 
-* How to run the test suite
+After you have set up the project, run `cucumber` to see all the features running.
 
-* Services (job queues, cache servers, search engines, etc.)
+The next step is to run `rspec` to test all the spec files.
 
-* Deployment instructions
+After you are done with RSpec and Cucumber, it is time to get the project running.
 
-* ...
+Use the following command to run the project :
 
+`rackup -p $PORT -o $IP`
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+==THANK YOU
