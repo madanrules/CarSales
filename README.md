@@ -17,6 +17,7 @@ Now cd into the working directory - CarSales
 Do not forget to commit using the following commands:
 
 `git add -A`
+
 `git commit -am "Any-message"`
 
 =============================================================================================================================
