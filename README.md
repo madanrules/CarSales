@@ -20,6 +20,8 @@ Do not forget to commit using the following commands:
 
 `git commit -am "Any-message"`
 
+**Remember, commit early and often!**
+
 =============================================================================================================================
 
 Then run the following commands:
