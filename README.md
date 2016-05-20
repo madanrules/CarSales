@@ -21,7 +21,7 @@ Then run the following commands:
 
 1) `gem install bundle`
 
-2) `bundle install`
+2) `bundle install` 
 
 3) `rake db:migrate`
 
@@ -42,11 +42,30 @@ After you are done with RSpec and Cucumber, it is time to get the project runnin
 =============================================================================================================================
 
 
-Use the following command to run the project :
----------------------------------------------
+Use the following command to run the project locally:
+-----------------------------------------------------
 
 `rackup -p $PORT -o $IP`
 
+Deploying to Heroku:
+---------------------
+
+```
+ssh-keygen -t rsa
+heroku login
+heroku keys:add
+```
+
+`heroku create`
+
+`git push heroku master`
+
+`heroku run rake db:migrate`
+
+`heroku run rake db:seed`
+
+Now you should be able to navigate to your app's URL.  `heroku open`
+opens your browser to that URL.
 
 =============================================================================================================================
 
