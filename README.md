@@ -72,6 +72,8 @@ heroku keys:add
 
 `heroku run rake db:seed`
 
+`heroku run rake populate_car`
+
 Now you should be able to navigate to your app's URL.  `heroku open`
 opens your browser to that URL.
 
